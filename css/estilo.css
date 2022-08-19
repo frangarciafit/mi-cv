@@ -142,7 +142,6 @@ body{
     height: 400px;
     width: 300px;
     border: 1px solid saddlebrown;
-    position: relative;
 }
 .tarjeta-cursos-footer{
     position: absolute;
