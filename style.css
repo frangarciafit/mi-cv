@@ -2,6 +2,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* esto agregue para javascript */
+.ocultar{
+    display: block;
+}
+
 
 /* esto es para el header de la foto */
 .div-left p{
