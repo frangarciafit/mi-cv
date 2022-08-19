@@ -23,12 +23,6 @@ function identificarUsuario(){
         usuario.push(nombre)
         contador()
         localStorage.setItem('usuarios', JSON.stringify(usuario))
-        // let identicacion = document.createElement("p")
-        // let texto = document.createTextNode("Bienvenido " + nombre)
-        // identicacion.appendChild(texto)
-        // btnIdentificarse.appendChild(identicacion)
-        // document.body.appendChild(btnIdentificarse)
-        // btnIdentificarse.setAttribute('class', '{display: block}')
         parrafo_bienvenido.innerHTML = "Bienvenido " + nombre
         console.log(usuario)
     }else{
@@ -40,7 +34,6 @@ function identificarUsuario(){
 function contador(){
     let visitas = JSON.parse(localStorage.getItem('contador'))
     visitas = visitas + 1
-    // console.dir(visitas)
     contador_visitas.innerHTML =  visitas
     localStorage.setItem('contador', JSON.stringify(visitas))
 }
@@ -54,11 +47,13 @@ function reiniciarContador() {
 
 function mostrarUsuarios() {
     let usuariosTotales = JSON.parse(localStorage.getItem('usuarios'))
+    console.log('hola')
+    console.log(usuariosTotales)
+    mostrar_usuarios.innerText = ""
     for (user of usuariosTotales){
         let l = document.createElement('li')
         l.innerText = user
         mostrar_usuarios.appendChild(l)
-        // mostrar_usuarios.innerHTML(user)
         console.log(user)
     }
 }
